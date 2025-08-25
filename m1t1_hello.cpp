@@ -10,6 +10,7 @@ First program yay
 using namespace std;
 
 int main() {
-    cout << "Hello, World!" << endl; 
+    string first_name= "Alphons";
+    cout << "Hello, "<< first_name << endl; 
     return 0;
 }
