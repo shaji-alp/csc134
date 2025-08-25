@@ -3,7 +3,7 @@ CSC 134
 M1T1 - Hello World
 Alphons Shaji
 8/20/25
-First program
+First program yay
 */
 
 #include <iostream>
