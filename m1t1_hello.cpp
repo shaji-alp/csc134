@@ -11,6 +11,5 @@ using namespace std;
 
 int main() {
     cout << "Hello, World!" << endl; 
-    cout << "My foo is games" << endl;
     return 0;
 }
