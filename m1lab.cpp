@@ -16,8 +16,11 @@ int main() {
     int num_items = 10;
     double cost_per = 0.25;
 
-    cout << 'welcome to the' << item_name << 'store!'<< endl;
+    cout << "welcome to the " << item_name << " store!"<< endl;
+    cout << "each " << item_name << " is "<< cost_per << endl; 
+    cout << "we have " << num_items << " total." << endl;
     //processing
+
     double total_cost= num_items * cost_per;
 
     //end program
