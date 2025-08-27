@@ -1,0 +1,25 @@
+/*
+csc134
+milab
+Alphons Shaji
+8/27/25
+purpose-the mango sales program
+*/
+
+//magic word
+#include <iostream>
+using namespace std;
+
+int main() {
+    //start program
+    string item_name = "mango";
+    int num_items = 10;
+    double cost_per = 0.25;
+
+    cout << 'welcome to the' << item_name << 'store!'<< endl;
+    //processing
+    double total_cost= num_items * cost_per;
+
+    //end program
+    return 0;
+}
