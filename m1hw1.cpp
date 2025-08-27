@@ -9,6 +9,10 @@ purpose-movie talk
 #include <iostream>
 using namespace std;
 
-string movie_name = "shrek";
-int  release_year = 2001;
-double box_income = 492.5;
+
+int main() {
+    string movie_name = "shrek";
+    int  release_year = 2001;
+    double box_income = 492.5;
+    cout << "the movie" << movie_name << " came out in " << release_year << ", and had a gross of around " << box_income << " Million dollars" << endl;
+} 
