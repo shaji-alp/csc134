@@ -9,7 +9,7 @@ int main() {
     double total_cost;
 
     // greet user
-    cout<< "greetings1 welcome to our " << string_name<< " store1"<< endl;
+    cout<< "greetings! welcome to our " << string_name<< " store1"<< endl;
     //ask info
     cout<< " each "<< string_name << " cost $" << cost_per<< endl;
     cout<< "we have " << amount<< " in stock " << endl;
