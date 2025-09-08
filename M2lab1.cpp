@@ -1,3 +1,9 @@
+/*
+CSC134
+M2lab1
+Alphons SHaji
+9/8/25
+*/
 #include <iostream>
 using namespace std;
 
