@@ -8,5 +8,11 @@ Alphons Shaji
 using namespace std;
 
 int main() {
+    cout<< "question1"<< endl;
+    string name;
+    double deposit;
+    double withdraw
+
+    cin>> "enter name">>
 
 }
