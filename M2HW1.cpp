@@ -13,6 +13,12 @@ int main() {
     double deposit;
     double withdraw
 
-    cin>> "enter name">>
+    cout<<"enter name" <<endl;
+    cin>> name >> endl;
+    cout<<"deposit amount" << endl;
+    cin>>deposit>>endl;
+    cout<<"Withdraw amount" << endl;
+    cin>> withdraw;>> endl;
+
 
 }
