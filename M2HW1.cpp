@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     /*QUESTION !*/
-    cout<< "question1"<< endl;
+    cout<< "Question 1"<< endl;
     string name;
     double deposit, withdraw, balance;
 
@@ -30,6 +30,7 @@ int main() {
     cout<<endl;
 
     /*Question2 */
+    cout<< "Question 2"<< endl;
     double length, width, height,volume;
     double cost_to_make, charge_to_customer;
     double profit;
@@ -62,6 +63,7 @@ int main() {
     cout<<endl;
 
     /*Question 3*/
+    cout<< "Question 3"<< endl;
     const int slice_person=3;
     int slice_pizza, box, people, leftovers;
 
@@ -81,6 +83,7 @@ int main() {
     cout<<endl;
 
     /*Question 4*/
+    cout<< "Question 4"<< endl;
     string school, team, cheer, cheer1, cheer2, schoolcheer,teamcheer;
     school= "FTCC ";
     team= "Trojans ";
@@ -97,6 +100,6 @@ int main() {
     /*End of question 4*/
 
 
-    return 0
+    return 0;
 
 }
