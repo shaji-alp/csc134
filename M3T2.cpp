@@ -5,7 +5,7 @@ Alphons Shaji
 9/22/25*/
 
 #include<iostream>
-#include<cstdlib>
+#include<cstdlib> // for rand() and srand()
 #include<ctime>
 
 using namespace std;
@@ -22,11 +22,17 @@ int main() {
     */
    int roll1 ;
    int roll2 ;
-   
+   int point ;
+   // setes rng before roll
+   srand(time(0));
+
    roll1= roll();
+   cout<<"roll1 "<<roll1<<endl;
    roll2= roll();
+   cout<<"roll2 "<<roll2<<endl;
  
    int sum=roll1+roll2;
+   cout<<"sum "<<sum<<endl;
 
    if ((sum==7)||(sum==11)){
     cout<<"lucky seven or eleven-- you win"<< endl;
@@ -44,5 +50,7 @@ int main() {
 }
 //helper function define
 int roll() {
-    return 6;
+    int my_roll;
+    my_roll= (rand()%6)+1; //1-6
+    return my_roll;
 }
