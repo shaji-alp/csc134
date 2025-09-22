@@ -12,7 +12,7 @@ using namespace std;
 
 int roll();
 
-int mani() {
+int main() {
     //int num= roll();
     //cout<<num<<endl;
     //main craps cycle
@@ -20,18 +20,26 @@ int mani() {
     roll 2d6
     branch win, lse or poin
     */
-   int roll1 =5;
-   int roll2 =2;
+   int roll1 ;
+   int roll2 ;
+   
+   roll1= roll();
+   roll2= roll();
+ 
    int sum=roll1+roll2;
 
-   if (sum==7){
-    cout<<"lucky seven-- you win"<< endl;
+   if ((sum==7)||(sum==11)){
+    cout<<"lucky seven or eleven-- you win"<< endl;
    }
-   else{
-    cout<<"did not roll a 7"<< endl;
+   else if ((sum==2)||(sum==3)||(sum==12)){
+    cout<< "2,3,12 - you lose"<< endl;
    }
-
-
+   else {
+    point= sum;
+    cout<<"rolled a point"<< endl;
+    cout<<"your point is: "<< point << endl;
+   }
+    
     return 0;
 }
 //helper function define
