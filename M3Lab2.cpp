@@ -14,11 +14,11 @@ void combat();
 
 int main() {
     letter_grader();
+    combat();
     //combat()
     return 0;
 }
-
- void letter_grader(){
+void letter_grader(){
     double grade;
     string grade_letter;
 
@@ -53,5 +53,31 @@ int main() {
 
     cout<<"A number grade of "<<grade<<" is a(n) "<< grade_letter<< endl;
     cout<< endl<< endl;
+}
+void combat(){
+    int a_roll, a_bonus, enemy_armor;
+    string yes_no;
 
- }
+    cout<<"you are fighting a goblin"<< endl;
+    cout<<"enter roll"<<endl;
+    cin>>a_roll;
+    cout<<"enter bonus attack"<<endl;
+    cin>>a_bonus;
+    cout<<"enter enemy armor"<<endl;
+    cin>>enemy_armor;
+
+    if (a_roll+a_bonus>= enemy_armor){
+        cout<<"Hit"<< endl;
+    }
+    else{
+        cout<<"miss"<< endl;
+    }
+
+    cout<<"try again? y/n"<<endl;
+    cin>>yes_no;
+    if (yes_no=="y"){
+        combat();
+    }
+
+
+}
