@@ -75,7 +75,8 @@ void exercise2_levelUpStats(){
     cout << "------|-------|-------|-------" << endl;
 
     for(int i=0;i<=10;++i){
-
+        level==i;
+        
         cout<<level<<"    |"<<str<<"    |"<<dex<<"    |"<<intel<<"    |"<<endl;
 
     }
