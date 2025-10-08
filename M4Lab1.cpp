@@ -85,5 +85,42 @@ void exercise2_levelUpStats(){
     cout<<"total growth: STR +"<<str-BASE_STR<<" DEX +"<<str-BASE_DEX<<" INTELLINGENCE +"<<str-BASE_INT<<endl;
 }
 void exercise3_inventorySystem(){
-    cout<<"hi";
-}
+    // TODO: Create your equipment array with 5 items
+    string equipment[5] = {
+        "Iron Sword",
+        "Leather Armor",
+        "Health Potion",
+        "Magic Ring",
+        "Rope"
+    };
+
+    cout << "=== YOUR INVENTORY ===" << endl;
+    for(int i=0;i<5;i++){
+        cout<<i+1<<". "<<equipment[i]<<endl;
+    }
+    cout << "======================" << endl << endl;
+
+    // TODO: Get search term from user
+    string searchTerm;
+    cout << "Enter item to search for: ";
+    cin>>searchTerm;  // Clear the input buffer
+
+    // TODO: Search for the item using a loop
+    bool found = false;
+    for (int i=0;i<5;i++){
+        if (searchTerm== equipment[i]){
+            found=true;
+            break;
+            if (found=true){
+                cout<<searchTerm<<" was found in slot "<<i+1<<endl;
+                break;
+            }
+            else{
+                cout <<searchTerm << " not found in inventory." << endl;
+                break;
+            }
+        }
+        
+    }
+
+}  
