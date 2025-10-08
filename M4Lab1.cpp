@@ -75,11 +75,14 @@ void exercise2_levelUpStats(){
     cout << "------|-------|-------|-------" << endl;
 
     for(int i=0;i<=10;++i){
-        level==i;
+        level=i;
+        str=BASE_STR+(level*2);
+        dex=BASE_DEX+(level*3);
+        intel=BASE_STR+(level*1);
         
-        cout<<level<<"    |"<<str<<"    |"<<dex<<"    |"<<intel<<"    |"<<endl;
-
+        cout<<level<<"     |"<<str<<"     |"<<dex<<"     |"<<intel<<"      |"<<endl;
     }
+    cout<<"total growth: STR +"<<str-BASE_STR<<" DEX +"<<str-BASE_DEX<<" INTELLINGENCE +"<<str-BASE_INT<<endl;
 }
 void exercise3_inventorySystem(){
     cout<<"hi";
