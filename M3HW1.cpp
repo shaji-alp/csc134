@@ -67,9 +67,39 @@ void ques3(){
     cout<<"hi, go to pool or the park. enter 1 or 2";
     cin>>freewill;
     if (freewill==1){
-        cout<<"go too deep end or shallow end? 1 or 2"
+        cout<<"go too deep end or shallow end? 1 or 2";
+        cin>>freewill;
+        if (freewill==1){
+            cout<<"you went to to the deeper end\n you drowned to death cuz you cant swim"<< endl;
+        }
+        else{
+            cout<<"you had a great time at the shallow end of the pool"<< endl;
+        }
+    }
+    else {
+        cout<<"you went to the park\n You enjoyed your visit to the park"<<endl;
     }
 }
+int roll();
 void ques4(){
-    cout<<"hi";
+    
+    int num1, num2, answer, sum;
+    srand(time(0));
+    num1 =roll();
+    num2 =roll();
+    sum =num1+num2;
+    cout<<"enter the sum of "<<num1<<" and "<< num2<<endl;
+    cin>> answer;
+    if (answer==sum){
+        cout<<sum<< " is the correct answer!! good job"<<endl;
+    }
+    else{
+        cout<<"thats incorrect... try again.";
+        ques4();
+    }
+}
+int roll(){
+    int rolled_num;
+    rolled_num=(rand()%10);
+    return rolled_num;
 }
