@@ -4,6 +4,8 @@
 // 10/13/25
 
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 void ques1();
 void ques2();
