@@ -106,21 +106,18 @@ void exercise3_inventorySystem(){
     cin>>searchTerm;  // Clear the input buffer
 
     // TODO: Search for the item using a loop
-    bool found = false;
+    int found ;
     for (int i=0;i<5;i++){
         if (searchTerm== equipment[i]){
-            found=true;
-            break;
-            if (found=true){
+            found=1;
+            if (found==1){
                 cout<<searchTerm<<" was found in slot "<<i+1<<endl;
                 break;
             }
-            else{
-                cout <<searchTerm << " not found in inventory." << endl;
-                break;
-            }
         }
-        
     }
-
+    if (found!=1){
+       cout <<searchTerm << " not found in inventory." << endl; 
+    }
+    
 }  
