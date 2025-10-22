@@ -6,24 +6,26 @@ Tier Gold*/
 
 using namespace std;
 
-void table1();
+void table1(int);
 
 int main(){
-    void table1();
-}
-void table1(){
-    int num,sol;
+    int num;
     cout<< "enter a number between 1 and 12 for times table ";
     cin>> num;
     if (num>=1 and num<=12){
-        for (int i=1; i<=12;i++){
-            sol= num*i;
-            cout<<num<<" times "<<i<<" is "<<sol<<endl;
-        }
+        table1(num);
     }
     else{
         cout<<"invalid input"<<endl;
-        table1();
+        main();
     }
     
+}
+void table1(int num){
+    int sol,i;
+    for(i=1;i<=12;i++){
+        sol=num*i;
+        cout<<num<<" times "<<i<<" is "<<sol<<endl;
+
+    }
 }
