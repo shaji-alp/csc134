@@ -9,20 +9,21 @@ using namespace std;
 void table1();
 
 int main(){
-    int num;
+    void table1();
+}
+void table1(){
+    int num,sol;
     cout<< "enter a number between 1 and 12 for times table ";
     cin>> num;
     if (num>=1 and num<=12){
-        table1(num);
+        for (int i=1; i<=12;i++){
+            sol= num*i;
+            cout<<num<<" times "<<i<<" is "<<sol<<endl;
+        }
     }
     else{
-        main();
+        cout<<"invalid input"<<endl;
+        table1();
     }
-}
-void table1(num){
-    int sol;
-    for (i<=12,i=1,i++){
-        sol= abc*i;
-        cout<<abc<<" times "<<i<<" is "<<sol<<endl;
-    }
+    
 }
