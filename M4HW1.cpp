@@ -22,8 +22,8 @@ int main(){
     
 }
 void table1(int num){
-    int sol,i;
-    for(i=1;i<=12;i++){
+    int sol;
+    for(int i=1;i<=12;i++){
         sol=num*i;
         cout<<num<<" times "<<i<<" is "<<sol<<endl;
 

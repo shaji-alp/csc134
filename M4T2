@@ -1,0 +1,164 @@
+html file - file:///C:/Users/alpho/Downloads/Hungry%20Adventure.html 
+
+:: StoryTitle
+Hungry Adventure
+
+
+:: StoryData
+{
+  "ifid": "20FC21D4-C093-4110-BECA-FBE675BDDD3C",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start (House)",
+  "zoom": 1
+}
+
+
+:: Arrested (Criminal Ending) {"position":"1100,275","size":"100,100"}
+You ate what you could until the police came
+the police are here
+the cops arrested you
+Atleast you aren't hungry
+
+**CRIMINAL ENDING !!!**
+
+
+:: Bought Burger (Good Ending) {"position":"1100,150","size":"100,100"}
+You bought burger
+You are not hungry anymore
+You went back home and slept
+
+**GOOD ENDING !!!**
+
+
+:: Broke In (Alarm) {"position":"850,350","size":"100,100"}
+You broke the window on the door
+the alarm went off
+the cops are on their way
+
+What will you do??
+
+* [[eat what you can find->Arrested (Criminal Ending)]]
+* [[run->Subway Surfers (Ending)]]
+
+
+:: Cashier 1 {"position":"700,200","size":"100,100"}
+Cashier- Would you like to buy cheeseburger
+
+* [[yea->Bought Burger (Good Ending)]]
+* [[no->McDonalds]]
+
+
+:: ChicFilA {"position":"300,350","size":"100,100"}
+ChicFilA is closed because it sunday
+You are very hungry
+Go to KFC instead?
+
+* [[yes->KFC]]
+* [[no->ChicFilA Break In?]]
+
+
+:: ChicFilA Break In? {"position":"550,350","size":"100,100"}
+ok
+you knocked on the door
+there's no one inside
+
+Break in??
+
+* [[yea->Broke In (Alarm)]]
+* [[no->ChicFilA]]
+
+
+:: Evil Cashier {"position":"700,100","size":"100,100"}
+greetings mortal ! eat this evil cheeseburger
+
+* [[yes (eat)->Evil Cheeseburger (Evil Ending)]]
+* [[Yes (eat)->Evil Cheeseburger (Evil Ending)]]
+
+
+:: Evil Cheeseburger (Evil Ending) {"position":"1100,50","size":"100,100"}
+You ate the evil cheeseburger
+You are evil now
+You will never be hungry again
+
+**EVIL ENDING !!!**
+
+
+:: KFC {"position":"300,600","size":"100,100"}
+Welcome
+
+* [[greetings->KFC Winner (Decent Ending)]]
+* [[hello->KFC Wait Time]]
+
+
+:: KFC Chips (Good Ending 2) {"position":"1100,600","size":"100,100"}
+ok
+you can have this packet of chips right now
+you ate the chips
+you barely survived for 6 mins
+you are not hungry anymore
+
+**GOOD ENDING 2 !!!**
+
+
+:: KFC Wait Time {"position":"700,600","size":"100,100"}
+the wait time is currently 6 minutes
+Can you survive for 6-minutes?
+
+* [[yes->Starvation (Ending)]]
+* [[no->KFC Chips (Good Ending 2)]]
+
+
+:: KFC Winner (Decent Ending) {"position":"1100,500","size":"100,100"}
+greetings
+congratulation for being the 1 millionth customer !!!!!!!
+you win infinite kfc for life !!!!
+You will never be hungry again
+
+**Decent ending !!!**
+
+
+:: McDonalds {"position":"300,100","size":"100,100"}
+You came to McDonalds
+
+Where do you want to go?
+
+* [[Go to cashier->Cashier 1]]
+* [[Go to evil cashier->Evil Cashier]]
+
+
+:: Sleep Again {"position":"100,400","size":"100,100"}
+you slept again
+you can't sleep because you just woke up
+
+* [[Try something else->Start (House)]]
+
+
+:: Start (House) {"position":"100,225","size":"100,100"}
+greetings! start adventure
+you just woke up 
+you are hungry
+
+You're at home and feeling hungry. Where do you want to go?
+
+* [[Go to McDonalds->McDonalds]]
+* [[Go to ChicFilA->ChicFilA]]
+* [[sleep again->Sleep Again]]
+
+
+:: Starvation (Ending) {"position":"1100,700","size":"100,100"}
+You are very hungry
+You are starving
+you couldn't handle the wait time
+you died of starvation
+
+**STARVATION ENDING !!!**
+
+
+:: Subway Surfers (Ending) {"position":"1100,375","size":"100,100"}
+you ran outside
+The cops are chasing you
+You keep running 
+you kept running forever while the cops chase you on some train tracks
+
+**SUBWAY SURFERS ENDING !!!**
