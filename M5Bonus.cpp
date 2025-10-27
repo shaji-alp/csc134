@@ -2,52 +2,61 @@
 #include <cstdlib>
 #include <ctime>
 
+// Use the std namespace for cleaner code (e.g., just 'cout' instead of 'std::cout')
+using namespace std;
+
 /**
  * @brief Simple C++ Cup Guessing Game (Shell Game).
- * The user tries to guess which of the three cups hides the ball.
- * The game repeats until the user guesses correctly.
+ * The ball is reshuffled (new random position) every time the user guesses.
+ * The game runs indefinitely until the user guesses correctly or enters '0' to quit.
  */
 int main() {
     // Seed the random number generator using the current time
-    std::srand(std::time(0));
+    srand(time(0));
 
-    // The ball is under cup 1, 2, or 3.
-    // rand() % 3 gives 0, 1, or 2. Adding 1 makes it 1, 2, or 3.
-    // *** The ball_cup is generated ONCE before the loop starts. ***
-    const int ball_cup = (std::rand() % 3) + 1;
     int user_guess = 0;
     
-    std::cout << "Welcome to the Simple Cup Game!\n";
-    std::cout << "Try to guess which of the three cups (1, 2, or 3) holds the ball.\n";
-    std::cout << "The game repeats until you guess correctly.\n\n";
-
-    // Use a do-while loop to repeat the game logic
-    do {
-        std::cout << "Which cup (1, 2, or 3) holds the ball? Enter your guess: ";
+    cout << "Welcome to the Simple Cup Game!\n";
+    cout << "A new ball position is randomly set before every guess (cups are reshuffled).\n";
+    cout << "Enter '0' at any time to quit the game.\n";
+    
+    // Use an infinite loop to keep the game running until explicitly broken
+    while (true) {
+        
+        // *** MOVED INSIDE THE LOOP: The ball_cup is generated/reshuffled every iteration. ***
+        // rand() % 3 gives 0, 1, or 2. Adding 1 makes it 1, 2, or 3.
+        const int ball_cup = (rand() % 3) + 1;
+        
+        cout << "\nWhich cup (1, 2, or 3) holds the ball? Enter your guess: ";
         
         // Get the user's guess
-        // We need to clear any potential previous bad input flags and ignore
-        // the remaining input line before attempting a new read inside the loop.
-        if (!(std::cin >> user_guess)) {
-            // Handle fatal non-number input (e.g., EOF or first input)
-            std::cerr << "Invalid input. Ending game.\n";
-            return 1;
+        if (!(cin >> user_guess)) {
+            cerr << "Invalid input. Ending game.\n";
+            break; // Exit the loop on non-numeric input error
+        }
+        
+        // 1. Check for the exit command
+        if (user_guess == 0) {
+            cout << "\n👋 Thanks for playing! Goodbye.\n";
+            break; // Exit the loop and end the game
         }
 
-        // Check if the guess is valid (between 1 and 3)
+        // 2. Check if the guess is valid (between 1 and 3)
         if (user_guess < 1 || user_guess > 3) {
-            std::cout << "\n🚫 That's not one of the cups! Please guess 1, 2, or 3.\n\n";
+            cout << "🚫 That's not one of the cups! Please guess 1, 2, or 3.\n";
+            // Loop continues to the next iteration (reshuffling the ball again)
         } else {
-            // Reveal the result
+            // 3. Reveal the result
             if (user_guess == ball_cup) {
-                std::cout << "\n🎉 Congratulations! You guessed correctly! The ball was under cup " << ball_cup << ".\n";
+                cout << "\n🎉 Congratulations! You guessed correctly.\n";
+                // The game ends after a correct guess
+                break; 
             } else {
-                std::cout << "\nUnlucky! The ball is NOT under cup " << user_guess << ". Try again!\n\n";
+                cout << "\nUnlucky! The ball was actually under cup " << ball_cup << " this time. Try again!\n";
+                // Loop continues to the next iteration (reshuffling the ball again)
             }
         }
-    // The loop continues AS LONG AS the user's guess is NOT equal to the ball_cup
-    // OR if the guess was invalid (outside 1-3)
-    } while (user_guess != ball_cup);
+    }
 
     return 0;
 }
