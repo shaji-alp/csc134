@@ -52,23 +52,24 @@ void exercise1_healthRegen(){
     cout <<"EXERCISE 1: HEALTH REGENERATION" << endl;
     int health=30;
     int maxhealth=100;
-    string healthbar="|||";
+    string healthbar="🟩🟩🟩";
     string emptyhealth="";
     int num=7;
     int i;
 
     while(health<=maxhealth){
         for(int i=0;i<num;i++){
-            emptyhealth=emptyhealth+"-";
+            emptyhealth=emptyhealth+"⬜";
         }
 
         cout<< "health= "<<health<< endl;
         cout<<"health ["<<healthbar<<emptyhealth<<"]"<<endl;
-        healthbar=healthbar+"|" ;              
+        healthbar=healthbar+"🟩" ;              
         health=health+10;
         num=num-1;
         emptyhealth="";
     }
+    cout<<"Fully recovered!!!"<< endl;
 
 
 }
