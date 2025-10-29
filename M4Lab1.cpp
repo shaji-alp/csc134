@@ -102,8 +102,9 @@ void exercise3_inventorySystem(){
 
     // TODO: Get search term from user
     string searchTerm;
+    cin.ignore();
     cout << "Enter item to search for: ";
-    cin>>searchTerm;  // Clear the input buffer
+    getline(cin,searchTerm);  // Clear the input buffer
 
     // TODO: Search for the item using a loop
     int found ;
