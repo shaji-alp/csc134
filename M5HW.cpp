@@ -58,7 +58,17 @@ void averagerainfall(){
     cout<<"Average rainfall for "<<month1<<", "<<month2<<" and "<<month3<<" is "<<average<<endl;
 }
 void volume(){
-    cout<<"hi";
+    double length, width, height, volume;
+    cout<<"enter length, width and height for volume!!"<<endl;
+    cout<<"length ";
+    cin>>length;
+    cout<<"width ";
+    cin>>width;
+    cout<<"height ";
+    cin>>height;
+    volume=length*width*height;
+    cout<<"The volume is "<< volume<<endl;
+    
 }
 void romannum(){
     cout<<"hi";
