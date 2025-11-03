@@ -71,7 +71,16 @@ void volume(){
     
 }
 void romannum(){
-    cout<<"hi";
+    int num
+    cout<<"enter a number between 1 and 10 for roman numeral ";
+    cin>>num;
+    if (num>=1 and num<=10){
+        if ((num>=1 and num<=3)or(num>=6 and num<=8))
+    }
+    else{
+        cout<<"invalid input"<<endl;
+        romannum();
+    }
 }
 void geometrycalc(){
     cout<<"hi";
