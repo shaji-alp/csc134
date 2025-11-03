@@ -1,36 +1,36 @@
 #include <iostream>
 using namespace std;
 
-double getlen();
-double getwid();
-double getarea();
-void displaydata();
+double getlength();
+double getwidth();
+double getarea(double length,double width);
+void displaydata(double length, double width, double area);
 
 int main(){
-    double len,wid,area;
-    len=getlen();
-    wid=getwid();
-    area=getarea();
-    displaydata();
+    double length,width,area;
+    length=getlength();
+    width=getwidth();
+    area=getarea(length,width);
+    displaydata(length,width,area);
 }
-double getlen(){
-    double len;
+double getlength(){
+    double length;
     cout<<"enter length ";
-    cin>>len;
-    return len;
+    cin>>length;
+    return length;
 }
-double getwid(){
-    double wid;
+double getwidth(){
+    double width;
     cout<<"enter width ";
-    cin>>wid;
-    return wid;
+    cin>>width;
+    return width;
 }
-double getarea(double len,double wid){
+double getarea(double length,double width){
     double area;
-    area= len*wid;
+    area= length*width;
     return area;
 }
-void displaydata(double len, double wid, double area){
-    cout<<"Rectangle is "<< len<<" long and "<<wid<<" wide"<<endl;
+void displaydata(double length, double width, double area){
+    cout<<"Rectangle is "<< length<<" long and "<<width<<" wide"<<endl;
     cout<< "The area is "<< area<<endl;
 }
