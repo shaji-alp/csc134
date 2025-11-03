@@ -18,21 +18,20 @@ int main(){
     cout<<"5. Distance calculator"<<endl;
     cout<<"enter choice(1-5) ";
     cin>>choice;
-
     if (choice==1){
-        void averagerainfall();
+        averagerainfall();
     }
     else if (choice==2){
-        void volume();
+        volume();
     }
     else if (choice==3){
-        void romannum();
+        romannum();
     }
     else if (choice==4){
-        void geometrycalc();
+        geometrycalc();
     }
     else if (choice==5){
-        void distance();
+        distance();
     }
     else{
         cin.clear();
@@ -42,7 +41,7 @@ int main(){
 }
 void averagerainfall(){
     string month1,month2,month3;
-    int rain1,rain2,rain3;
+    int rain1,rain2,rain3,average;
     cout<<"\nEnter month ";
     cin>>month1;
     cout<<"\nEnter rainfall for "<<month1<<" ";
@@ -55,4 +54,18 @@ void averagerainfall(){
     cin>>month3;
     cout<<"\nEnter rainfall for "<<month3<<" ";
     cin>>rain3;
+    average=(rain1+rain2+rain3)/3;
+    cout<<"Average rainfall for "<<month1<<", "<<month2<<" and "<<month3<<" is "<<average<<endl;
+}
+void volume(){
+    cout<<"hi";
+}
+void romannum(){
+    cout<<"hi";
+}
+void geometrycalc(){
+    cout<<"hi";
+}
+void distance(){
+    cout<<"hi";
 }
