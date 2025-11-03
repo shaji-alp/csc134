@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void averagerainfall();
@@ -21,24 +22,37 @@ int main(){
     if (choice==1){
         void averagerainfall();
     }
-    else if (choice==1){
+    else if (choice==2){
         void volume();
     }
-    else if (choice==1){
+    else if (choice==3){
         void romannum();
     }
-    else if (choice==1){
+    else if (choice==4){
         void geometrycalc();
     }
-    else if (choice==1){
+    else if (choice==5){
         void distance();
     }
     else{
         cin.clear();
         cout<<"Invalid input"<<endl;
         main();
-
     }
-    
-    
+}
+void averagerainfall(){
+    string month1,month2,month3;
+    int rain1,rain2,rain3;
+    cout<<"\nEnter month ";
+    cin>>month1;
+    cout<<"\nEnter rainfall for "<<month1<<" ";
+    cin>>rain1;
+    cout<<"\nEnter month ";
+    cin>>month2;
+    cout<<"\nEnter rainfall for "<<month2<<" ";
+    cin>>rain2;
+    cout<<"\nEnter month ";
+    cin>>month3;
+    cout<<"\nEnter rainfall for "<<month3<<" ";
+    cin>>rain3;
 }
