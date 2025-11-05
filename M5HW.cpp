@@ -78,10 +78,43 @@ void volume(){
 }
 void romannum(){
     int num;
+    string one="I";
+    string five="V";
+    string ten="X";
+    string output="";
+    string initial="";
     cout<<"enter a number between 1 and 10 for roman numeral ";
     cin>>num;
     if (num>=1 and num<=10){
-        if ((num>=1 and num<=3)or(num>=6 and num<=8))
+        if (num==1 ){
+            output=one;
+        }
+        else if (num==5 ){
+            output=five;
+        }
+        else if (num==10 ){
+            output=ten;
+        }
+        else if (num==2 or num==3 or num==6 or num==7 or num==8 ){
+            if (num==6 or num==7 or num==8){
+                initial=five;
+                num=num-5;
+            }
+            for (int i; i<num;i++){
+                output=output+one;
+            }
+            output=initial+output;
+        }
+        else {
+            if (num==9){
+                initial=ten;
+            }
+            else {
+                initial=five;
+            }
+            output=one+initial;
+        }
+        cout<<"Your number in roman numeral is "<<output<<endl;
     }
     else{
         cout<<"invalid input"<<endl;
@@ -89,7 +122,39 @@ void romannum(){
     }
 }
 void geometrycalc(){
-    cout<<"hi";
+    int choice;
+    double radius,length, height, width, base,area;
+    cout<<"enter number for calculator"<<endl;
+    cout<<"1. Calculate the Area of a Circle"<<endl;
+    cout<<"2. Calculate the Area of a Rectangle"<<endl;
+    cout<<"3. Calculate the Area of a Triangle"<<endl;
+    cout<<"4. Quit"<<endl;
+    cout<<"Enter 1-4 for calc";
+    cin>>choice;
+    if (choice==1){
+        cout<<"Enter radius of circle";
+        cin>>radius;
+        area=3.14*(radius*radius);
+    }
+    else if( choice==2){
+        cout<<"Enter width of rectangle";
+        cin>>length;
+        cout<<"Enter length of rectangle";
+        cin>>width;
+        area=length*width;
+    }
+    else if( choice==3){
+        cout<<"Enter base of triangle";
+        cin>>base;
+        cout<<"Enter heighth of triangle";
+        cin>>height;
+        area=0.5*height*base;
+    }
+    else{
+        cout<<"ok"<<endl;
+        main();
+    }
+    cout<<"The area is "<<area<<endl;
 }
 void distance(){
     cout<<"hi";
