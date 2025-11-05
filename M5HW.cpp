@@ -1,3 +1,9 @@
+/*
+Csc-134
+M5HW1
+Alphons Shaji
+11/5/25
+tier gold*/
 #include <iostream>
 #include <string>
 using namespace std;
@@ -71,7 +77,7 @@ void volume(){
     
 }
 void romannum(){
-    int num
+    int num;
     cout<<"enter a number between 1 and 10 for roman numeral ";
     cin>>num;
     if (num>=1 and num<=10){
