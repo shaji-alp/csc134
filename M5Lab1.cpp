@@ -14,13 +14,12 @@ int main(){
 int getchoice(int max){
     int choice;
     cin.clear();
-    cout<<" your choice ";
-    cin>>choice;
-    if ((choice>=1) and(choice<=max)){
-        return choice;
-    }
-    else{
+    while(true){
+        cout<<" your choice ";
+        cin>>choice;
+        if ((choice>=1) and(choice<=max)){
+         return choice;
+        }
         cout<<"invalid input"<<endl;
-        getchoice();
     }
 }
