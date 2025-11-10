@@ -2,21 +2,20 @@
 using namespace std;
 
 int square(int i);
-void printanswerline(int i,int x);
+void printanswerline(int solution,int x);
 
 int main(){
-    int x;
+    int solution;
     for (int i=0;i<=10;i++){
-        x=i;
-        square(i);
-        printanswerline(i,x);
+        solution=square(i);
+        printanswerline(solution,i);
     }
 }
 int square(int i){
-    int square;
-    square= i*i;
-    return square;
+    int square,solution;
+    solution= i*i;
+    return solution;
 }
-void printanswerline(int i,int x){
-    cout<<x<<"\t"<<i<<endl;
+void printanswerline(int solution,int i){
+    cout<<i<<"\t"<<solution<<endl;
 }
