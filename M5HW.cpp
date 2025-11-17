@@ -157,5 +157,15 @@ void geometrycalc(){
     cout<<"The area is "<<area<<endl;
 }
 void distance(){
-    cout<<"hi";
+    int speed, time, distance;
+    cout<<"Enter speed of vehicle- ";
+    cin>>speed;
+    cout<<"Enter how long driven (in hours)- ";
+    cin>> time;
+    cout<<"Hour\t"<<"Distance\t"<<endl;
+    for (int i=0;i<=time;i++){
+        distance=i*speed;
+        cout<<i<<"\t"<<distance<<"\t"<<endl;
+    }
+
 }
