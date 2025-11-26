@@ -6,8 +6,13 @@ using namespace std;
 int Xenter();
 int Oenter();
 bool validinput(int loc);
-bool checkwin(string x);
+bool checkwin(string x[]);
 void board();
+
+// GLOBAL VARIABLES
+// If you create an array here, before main(), it can be accessed by any function.
+const int spot=9;
+string placeholder[spot]={"1","2","3","4","5","6","7","8","9"};
 
 int main(){
     cout<<"Welcome. Player 1 is X. Player 2 is O"<<endl;
@@ -16,8 +21,7 @@ int main(){
 void board(){
     bool win= false;
     int hi=0;
-    const int spot=9;
-    string placeholder[spot]={"1","2","3","4","5","6","7","8","9"};
+
     for (int i;i<10;i++){
         win=checkwin(placeholder[spot]);
         cout<<placeholder[0]<<"\t||\t"<<placeholder[1]<<"\t||\t"<<placeholder[2]<<"\n";
@@ -61,7 +65,7 @@ int Oenter(){
     Oloc=Oloc-1;
     return Oloc;
 }
-bool checkwin(string x){
+bool checkwin(string x[]){
     if ((x[0]=="X")and(x[1]=="X")and(x[2]=="X")){
         return true;
     }
