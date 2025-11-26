@@ -1,12 +1,10 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <ctime>
+#include <vector>
 
 using namespace std;
-void player1();
-void player2();
-void XorO();
+void Xenter();
+void Oenter();
 void validinput();
 void checkwin();
 void board();
@@ -17,8 +15,36 @@ int main(){
 }
 void board(){
     bool win= false;
+    int hi=0;
+    int spot=9;
+    string placeholder[spot]=" ";" ";" ";" ";" ";" ";" ";" ";" ";
     while (win==false){
-        cout<<R"(uyybv8y
-            iyhiyvb)";
+        cout<<"X\t||\tX\t||\tX\n";
+        cout<<"----------------------------------\n";
+        cout<<"X\t||\tX\t||\tX\n";
+        cout<<"----------------------------------\n";
+        cout<<"X\t||\tX\t||\tX\n";
+        win=true;
+        if (hi==0){
+            hi=1;
+            Xenter();
+        }
+        else if (hi==1){
+            hi=0
+            Oenter();
+        }
+        win=checkwin();
     }
+}
+void Xenter(){
+    int Xloc;
+    cout<<"Player 1 enter location of X"<<endl;
+    cin>>Xloc;
+    return Xloc;
+}
+void Oenter(){
+    int Oloc;
+    cout<<"Player 2 enter location of O"<<endl;
+    cin>>Oloc;
+    return Oloc;
 }
