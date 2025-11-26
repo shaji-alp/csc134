@@ -18,29 +18,31 @@ void board(){
     int hi=0;
     const int spot=9;
     string placeholder[spot]={"1","2","3","4","5","6","7","8","9"};
-    for (int i=0;i<10;i++){
+    for (int i;i<10;i++){
+        win=checkwin(placeholder[spot]);
         cout<<placeholder[0]<<"\t||\t"<<placeholder[1]<<"\t||\t"<<placeholder[2]<<"\n";
         cout<<"__________________________________\n";
         cout<<placeholder[3]<<"\t||\t"<<placeholder[4]<<"\t||\t"<<placeholder[5]<<"\n";
         cout<<"__________________________________\n";
         cout<<placeholder[6]<<"\t||\t"<<placeholder[7]<<"\t||\t"<<placeholder[8]<<"\n";
         win=false;
-        if (hi==0){
-            hi=1;
-            int xnum;
-            xnum=Xenter();
-            placeholder[xnum]="❌";
-        }
-        else if (hi==1){
-            hi=0;
-            int onum;
-            onum=Oenter();
-            placeholder[onum]="🟢";
-        }
-      
+        if (i<9){
+            if (hi==0){
+                hi=1;
+                int xnum;
+                xnum=Xenter();
+                placeholder[xnum]="❌";
+            }
+            else if (hi==1){
+                hi=0;
+                int onum;
+                onum=Oenter();
+                placeholder[onum]="🟢";
+            }
+        } 
     }
     if (win==false){
-        cout<<"Tie"<<endl;
+        cout<<"Tie";
     }
 }
 int Xenter(){
@@ -58,4 +60,12 @@ int Oenter(){
     cin>>Oloc;
     Oloc=Oloc-1;
     return Oloc;
+}
+bool checkwin(string x){
+    if ((x[0]=="X")and(x[1]=="X")and(x[2]=="X")){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
