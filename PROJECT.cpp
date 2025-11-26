@@ -3,10 +3,10 @@
 #include <vector>
 
 using namespace std;
-void Xenter();
-void Oenter();
+int Xenter();
+int Oenter();
 void validinput();
-void checkwin();
+bool checkwin();
 void board();
 
 int main(){
@@ -17,7 +17,7 @@ void board(){
     bool win= false;
     int hi=0;
     int spot=9;
-    string placeholder[spot]=" ";" ";" ";" ";" ";" ";" ";" ";" ";
+    string placeholder[spot]={" ";" ";" ";" ";" ";" ";" ";" ";" "};
     while (win==false){
         cout<<"X\t||\tX\t||\tX\n";
         cout<<"----------------------------------\n";
@@ -36,13 +36,13 @@ void board(){
         win=checkwin();
     }
 }
-void Xenter(){
+int Xenter(){
     int Xloc;
     cout<<"Player 1 enter location of X"<<endl;
     cin>>Xloc;
     return Xloc;
 }
-void Oenter(){
+int Oenter(){
     int Oloc;
     cout<<"Player 2 enter location of O"<<endl;
     cin>>Oloc;
