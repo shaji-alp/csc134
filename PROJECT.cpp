@@ -16,10 +16,11 @@ int main(){
 void board(){
     bool win= false;
     int hi=0;
-    int spot=9;
-    string placeholder[spot]={" ";" ";" ";" ";" ";" ";" ";" ";" "};
+    const int spot=9;
+    string placeholder[spot]={"1","2","3","4","5","6","7","8","9"};
     while (win==false){
-        cout<<"X\t||\tX\t||\tX\n";
+        win=checkwin();
+        cout<<placeholder[1]<<"\t||\t"<<placeholder[2]<<"\t||\t"<<placeholder[]"\n";
         cout<<"----------------------------------\n";
         cout<<"X\t||\tX\t||\tX\n";
         cout<<"----------------------------------\n";
@@ -30,10 +31,10 @@ void board(){
             Xenter();
         }
         else if (hi==1){
-            hi=0
+            hi=0;
             Oenter();
         }
-        win=checkwin();
+      
     }
 }
 int Xenter(){
