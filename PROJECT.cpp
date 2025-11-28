@@ -5,8 +5,7 @@
 using namespace std;
 int Xenter();
 int Oenter();
-bool validinput(int loc);
-bool checkwin(string x[]);
+bool validinput(int x);
 void board();
 
 // GLOBAL VARIABLES
@@ -21,15 +20,26 @@ int main(){
 void board(){
     bool win= false;
     int hi=0;
+    
+    for (int i=0 ;i<10;i++){
 
-    for (int i;i<10;i++){
-        win=checkwin(placeholder[spot]);
         cout<<placeholder[0]<<"\t||\t"<<placeholder[1]<<"\t||\t"<<placeholder[2]<<"\n";
         cout<<"__________________________________\n";
         cout<<placeholder[3]<<"\t||\t"<<placeholder[4]<<"\t||\t"<<placeholder[5]<<"\n";
         cout<<"__________________________________\n";
         cout<<placeholder[6]<<"\t||\t"<<placeholder[7]<<"\t||\t"<<placeholder[8]<<"\n";
-        win=false;
+
+        if ((placeholder[0]=="❌" and placeholder[1]=="❌" and placeholder[2]=="❌") or (placeholder[3]=="❌" and placeholder[4]=="❌" and placeholder[5]=="❌")or(placeholder[6]=="❌" and placeholder[7]=="❌" and placeholder[8]=="❌")or(placeholder[0]=="❌" and placeholder[3]=="❌" and placeholder[6]=="❌") or (placeholder[1]=="❌" and placeholder[4]=="❌" and placeholder[7]=="❌")or(placeholder[2]=="❌" and placeholder[5]=="❌" and placeholder[8]=="❌")or (placeholder[0]=="❌" and placeholder[4]=="❌" and placeholder[8]=="❌")or(placeholder[2]=="❌" and placeholder[4]=="❌" and placeholder[6]=="❌")){
+            cout<<"Player 1 wins!!"<<endl;
+            win=true;
+            break;
+        }
+        else if ((placeholder[0]=="🟢" and placeholder[1]=="🟢" and placeholder[2]=="🟢") or (placeholder[3]=="🟢" and placeholder[4]=="🟢" and placeholder[5]=="🟢")or(placeholder[6]=="🟢" and placeholder[7]=="🟢" and placeholder[8]=="🟢")or(placeholder[0]=="🟢" and placeholder[3]=="🟢" and placeholder[6]=="🟢") or (placeholder[1]=="🟢" and placeholder[4]=="🟢" and placeholder[7]=="🟢")or(placeholder[2]=="🟢" and placeholder[5]=="🟢" and placeholder[8]=="🟢")or(placeholder[0]=="🟢" and placeholder[4]=="🟢" and placeholder[8]=="🟢")or(placeholder[2]=="🟢" and placeholder[4]=="🟢" and placeholder[6]=="🟢")){
+            cout<<"Player 2 wins!!"<<endl;
+            win=true;
+            break;
+        }
+        
         if (i<9){
             if (hi==0){
                 hi=1;
@@ -46,30 +56,42 @@ void board(){
         } 
     }
     if (win==false){
-        cout<<"Tie";
+        cout<<"Tie\n";
     }
 }
 int Xenter(){
-    int Xloc;
-    bool cont=false;
-    cout<<"Player 1 enter location of X"<<endl;
-    cin>>Xloc;
-    Xloc=Xloc-1;
-    return Xloc;
+     int Xloc;
+    bool cont= false;
+    while (cont==false){
+        cout<<"Player 1 enter location of X"<<endl;
+        cin>>Xloc;
+        Xloc=Xloc-1;
+        cont= validinput(Xloc);
+        if (cont==true){
+            return Xloc;
+        }
+        cout<<"invalid input"<<endl;
+    }  
 }
 int Oenter(){
     int Oloc;
-    bool cont=false;
-    cout<<"Player 2 enter location of O"<<endl;
-    cin>>Oloc;
-    Oloc=Oloc-1;
-    return Oloc;
+    bool cont= false;
+    while (cont==false){
+        cout<<"Player 2 enter location of O"<<endl;
+        cin>>Oloc;
+        Oloc=Oloc-1;
+        cont= validinput(Oloc);
+        if (cont==true){
+            return Oloc;
+        }
+        cout<<"invalid input"<<endl;
+    }  
 }
-bool checkwin(string x[]){
-    if ((x[0]=="X")and(x[1]=="X")and(x[2]=="X")){
-        return true;
-    }
-    else{
+bool validinput(int x){
+    if ((placeholder[x]=="❌") or (placeholder[x]=="🟢")){
         return false;
+    }
+    else {
+        return true;
     }
 }
