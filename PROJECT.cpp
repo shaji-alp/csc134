@@ -1,3 +1,7 @@
+/*
+Project CSC 134
+Alphons Shaji
+2 player tic tac toe*/
 #include <iostream>
 #include <string>
 #include <vector>
