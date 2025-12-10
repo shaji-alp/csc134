@@ -1,3 +1,4 @@
+Readme written by google gemini flash.
 ## 📝 README: Simple Tic-Tac-Toe Game (C++)
 
 This document provides an overview, explanation of functionality, and instructions for compiling and running the provided C++ Tic-Tac-Toe game code.
